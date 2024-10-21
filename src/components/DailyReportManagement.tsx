@@ -90,6 +90,7 @@ const MyDocument: React.FC<{ patients: Patient[], appointments: Appointment[], s
           <View style={styles.tableCol}><Text style={styles.tableCell}>Medical Number</Text></View>
           <View style={styles.tableCol}><Text style={styles.tableCell}>Specialty</Text></View>
           <View style={styles.tableCol}><Text style={styles.tableCell}>Type</Text></View>
+          <View style={styles.tableCol}><Text style={styles.tableCell}>Created At</Text></View>
         </View>
         {appointments.map((appointment) => (
           <View style={styles.tableRow} key={appointment.appointment_id}>
@@ -97,6 +98,7 @@ const MyDocument: React.FC<{ patients: Patient[], appointments: Appointment[], s
             <View style={styles.tableCol}><Text style={styles.tableCell}>{appointment.patient_medical_number}</Text></View>
             <View style={styles.tableCol}><Text style={styles.tableCell}>{appointment.clinic_specialty}</Text></View>
             <View style={styles.tableCol}><Text style={styles.tableCell}>{appointment.appointment_type}</Text></View>
+            <View style={styles.tableCol}><Text style={styles.tableCell}>{new Date(appointment.created_at).toLocaleString()}</Text></View>
           </View>
         ))}
       </View>
@@ -140,6 +142,7 @@ const DailyReportManagement: React.FC = () => {
           specialty,
           patient_status,
           diagnosis,
+          updated_at
         `)
         .or(`patient_status.eq.Active,and(patient_status.eq.Discharged,updated_at.gte.${new Date(Date.now() - 48 * 60 * 60 * 1000).toISOString()})`)
         .order('admission_date', { ascending: false });
