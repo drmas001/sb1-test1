@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
 // PDF Document component
 const MyDocument: React.FC<{ patients: Patient[], appointments: Appointment[], selectedDate: string, selectedSpecialty: string }> = ({ patients, appointments, selectedDate, selectedSpecialty }) => (
   <Document>
-    <Page size="A4" style={styles.page}>
+    <Page size="A3" style={styles.page}>
       <Text style={styles.title}>Daily Patient Report</Text>
       <Text style={styles.subtitle}>Date: {selectedDate}</Text>
       {selectedSpecialty && <Text style={styles.subtitle}>Specialty: {selectedSpecialty}</Text>}
