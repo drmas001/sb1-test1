@@ -90,7 +90,6 @@ const MyDocument: React.FC<{ patients: Patient[], appointments: Appointment[], s
           <View style={styles.tableCol}><Text style={styles.tableCell}>Medical Number</Text></View>
           <View style={styles.tableCol}><Text style={styles.tableCell}>Specialty</Text></View>
           <View style={styles.tableCol}><Text style={styles.tableCell}>Type</Text></View>
-          <View style={styles.tableCol}><Text style={styles.tableCell}>Created At</Text></View>
         </View>
         {appointments.map((appointment) => (
           <View style={styles.tableRow} key={appointment.appointment_id}>
@@ -98,7 +97,6 @@ const MyDocument: React.FC<{ patients: Patient[], appointments: Appointment[], s
             <View style={styles.tableCol}><Text style={styles.tableCell}>{appointment.patient_medical_number}</Text></View>
             <View style={styles.tableCol}><Text style={styles.tableCell}>{appointment.clinic_specialty}</Text></View>
             <View style={styles.tableCol}><Text style={styles.tableCell}>{appointment.appointment_type}</Text></View>
-            <View style={styles.tableCol}><Text style={styles.tableCell}>{new Date(appointment.created_at).toLocaleString()}</Text></View>
           </View>
         ))}
       </View>
