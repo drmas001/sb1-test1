@@ -142,7 +142,6 @@ const DailyReportManagement: React.FC = () => {
           specialty,
           patient_status,
           diagnosis,
-          updated_at
         `)
         .or(`patient_status.eq.Active,and(patient_status.eq.Discharged,updated_at.gte.${new Date(Date.now() - 48 * 60 * 60 * 1000).toISOString()})`)
         .order('admission_date', { ascending: false });
