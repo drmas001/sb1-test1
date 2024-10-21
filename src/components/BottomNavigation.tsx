@@ -15,7 +15,7 @@ const BottomNavigation: React.FC = () => {
   ];
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-indigo-800 text-white lg:hidden">
+    <nav className="fixed bottom-0 left-0 right-0 bg-indigo-800 text-white lg:hidden z-50">
       <ul className="flex justify-around">
         {navItems.map((item) => (
           <li key={item.name}>
