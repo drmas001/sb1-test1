@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Home, UserPlus, UserMinus, Activity, FileText, Calendar, Info } from 'lucide-react';
+import { Home, UserPlus, UserMinus, Activity, FileText, Calendar } from 'lucide-react';
 
 const BottomNavigation: React.FC = () => {
   const location = useLocation();

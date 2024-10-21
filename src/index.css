@@ -80,3 +80,10 @@ code {
     width: 16rem;
   }
 }
+
+/* Ensure bottom navigation doesn't overlap content */
+@media (max-width: 1023px) {
+  .pb-16 {
+    padding-bottom: 5rem; /* Adjust this value based on the height of your bottom navigation */
+  }
+}

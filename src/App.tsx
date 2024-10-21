@@ -49,7 +49,7 @@ function AppContent() {
         </>
       )}
       <div className={`flex-1 transition-all duration-300 ${
-        showNavigation ? 'lg:ml-16 mb-16 lg:mb-0' : ''
+        showNavigation ? 'lg:ml-16 pb-16 lg:pb-0' : ''
       } ${showNavigation && isSidebarExpanded ? 'lg:ml-64' : ''}`}>
         <div className="p-4 lg:p-8">
           <Routes>
